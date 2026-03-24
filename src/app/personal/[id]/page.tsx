@@ -5,6 +5,7 @@ import MediaGallery from "@/components/MediaGallery";
 import { getProjectMedia } from "@/lib/projectMedia";
 import ScrollToTopOnMount from "@/components/ScrollToTopOnMount";
 import EscapeToHomeOnMount from "@/components/EscapeToHomeOnMount";
+import LinkifiedText from "@/components/LinkifiedText";
 
 export function generateStaticParams() {
   return personalEntries.map((entry) => ({ id: entry.id }));
@@ -40,9 +41,10 @@ export default async function PersonalEntryPage({
           ← Back to Personal
         </Link>
         <h1 className="text-4xl font-bold tracking-tight text-white">{entry.title}</h1>
-        <p className="whitespace-pre-line text-lg leading-relaxed text-zinc-300">
-          {entry.body}
-        </p>
+        <LinkifiedText
+          text={entry.body}
+          className="whitespace-pre-line text-lg leading-relaxed text-zinc-300"
+        />
       </header>
 
       {mediaItems.length > 0 && (

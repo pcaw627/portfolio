@@ -6,6 +6,7 @@ import MediaGallery from "@/components/MediaGallery";
 import { getProjectMedia } from "@/lib/projectMedia";
 import EscapeToHomeOnMount from "@/components/EscapeToHomeOnMount";
 import ScrollToTopOnMount from "@/components/ScrollToTopOnMount";
+import LinkifiedText from "@/components/LinkifiedText";
 
 /* Generate static paths for all projects at build time. */
 export function generateStaticParams() {
@@ -57,9 +58,10 @@ export default async function ProjectPage({
         <h1 className="text-4xl font-bold tracking-tight text-white">
           {entry.title}
         </h1>
-        <p className="whitespace-pre-line text-lg leading-relaxed text-zinc-300">
-          {longSummary}
-        </p>
+        <LinkifiedText
+          text={longSummary}
+          className="whitespace-pre-line text-lg leading-relaxed text-zinc-300"
+        />
       </header>
 
       {mediaItems.length > 0 && (
@@ -73,9 +75,10 @@ export default async function ProjectPage({
         {textSections.map((section) => (
           <div key={section.heading} className="space-y-3">
             <h2 className="text-2xl font-semibold text-white">{section.heading}</h2>
-            <p className="whitespace-pre-line leading-relaxed text-zinc-300">
-              {section.body}
-            </p>
+            <LinkifiedText
+              text={section.body}
+              className="whitespace-pre-line leading-relaxed text-zinc-300"
+            />
           </div>
         ))}
       </section>

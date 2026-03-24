@@ -76,7 +76,7 @@ Developed testbenches for system-level and module-level verification, and execut
 
 As a musician, I wanted this project to be a few things. I wanted it to be something that felt tangible, something that could teach me a bit more about signal processing, something memorable, and something to serve as a challenge. Being an avid guitar player, I decided that it would be insanely cool to have a real time equalizer, which could boost or dampen the high, mid, and low frequencies as I play my electric guitar.
 
-This project served as an extension to the Pipelined CPU, which I also wrote about here [].
+This project served as an extension to the Pipelined CPU, which I also wrote about [here](/professional/pipelined-cpu-on-fpga).
 
 Given the short deadline and the enormous task, we first set about clarifying scope. First, we ran some figures to decide some constraints; to make this real-time, we would have to sample fast. And so we decided 44kHz, being a common sampling rate on CDs, would be a good standard (especially as it covers twice the full 20Hz-20kHz hearing range for humans, by Nyquist's). We also knew that the system clock on the FPGA was 100MHz. This means that for every sample, we would have roughly 100,000/44 [adjust, i forget but we ended up changing sysclock] --- system clock cycles between each sample, during which we can operate on all the samples stored up to this point.
 
@@ -90,11 +90,11 @@ We also had to implement custom FFT and IFFT registers to store the intermediate
 
 Thankfully, a few days before our demo we were able to get everything working nicely. However, the morning of, we had an unpleasant surprise- somehow our FPGA was stolen and the hardware wiring was completely dismantled. (Our ECE lab has plenty of spare FPGAs, wires, and resistors). We decided not to dwell on the "who", as we had saved the bitstream we tested with to GitHub- we just needed to rewire the simple voltage divider circuit to my amp and our new FPGA.
 
-That afternoon we had our final technical defense, and a live demo- watch here! [] (Do mind that I had no sleep and the scare of the stolen FPGA earlier, so I am a bit frazzled in the video here). You can hear the audio play through the speakers as I play- we implemented a low pass filter which amps up the low frequencies and mutes the highs.
+That afternoon we had our final technical defense, and a live demo- [watch here!](https://photos.app.goo.gl/tsZqLVrYK1sp1fjv7) (Do mind that I had no sleep and the scare of the stolen FPGA earlier, so I am a bit frazzled in the video here). You can hear the audio play through the speakers as I play- we implemented a low pass filter which amps up the low frequencies and mutes the highs.
 
 While Dr. Board pushed us hard in the final stretch, it was ultimately worth it. He said it was well done, and one of ~5 projects that incorporated FFTs in the 60 years that he's been teaching at Duke.`,
     keyLearnings:
-      "This project not only taught us the fundamentals of digital design, but it also taught us how to navigate the challenges that come along with signal processing. It also taught us the value of being independent, resourceful, and persistent, even in the face of an overwhelming task. (I took a graduate level design class concurrently with this one, which had its own final project- see here! [])",
+      "This project not only taught us the fundamentals of digital design, but it also taught us how to navigate the challenges that come along with signal processing. It also taught us the value of being independent, resourceful, and persistent, even in the face of an overwhelming task. (I took a graduate level design class concurrently with this one, which had its own final project- [see here!](/professional/spotter-ai-fitness-platform))",
   },
   "automated-crop-protection-system": {
     summary:
@@ -119,7 +119,7 @@ I used standard practices of using a train-val-test split, and the initial train
 
 After fixing that so the videos don't appear in both train and val sets, the training was quite bad (like 30% val accuracy if I remember right), but I used a few approaches to improve this. First I used data augmentation to vary the training set: color jitter (tint/brightness), rotations, and also addition of some noise to mimic blurs and rain.
 
-After a few hours, I ended up getting about a very nice confusion matrix, with a high val of 96% [double check figure, find the plot] (and a more sensible loss curve). Now the last step was to integrate this model for processing on the OrangePi's NPU.
+After a few hours, I ended up getting about a very nice confusion matrix, with a high val accuracy of 98% (see image above), and a more sensible loss curve. Now the last step was to integrate this model for processing on the OrangePi's NPU.
 
 However, around this time, our other subteam unfortunately ran into some trouble. Two of their teammates withdrew, which left them quite short-handed- as it currently was, none of the lights, sound, and motion were working. It was in a bad place, so in order to make the final deadline, me and two of my friends from the detect team made the decision to redirect our efforts to help assist with the completion of the deterrence subsystem.
 

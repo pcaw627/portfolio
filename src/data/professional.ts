@@ -13,8 +13,8 @@ import { ProfessionalEntry } from "./types";
 export const professionalEntries: ProfessionalEntry[] = [
   {
     slug: "translation-transcription-service",
-    title: "Translation + Transcription Service",
-    subtitle: "Real-time language support for learners",
+    title: "AI Translation & Transcription Service",
+    subtitle: "Real-time language immersion for learners",
     previewImage: "/assets/placeholder.png",
     sections: {
       technologies: {
@@ -41,7 +41,7 @@ export const professionalEntries: ProfessionalEntry[] = [
   },
   {
     slug: "spotter-ai-fitness-platform",
-    title: "SPOTTER AI Fitness Platform",
+    title: "SPOTTER - AI Fitness Platform",
     subtitle: "Real-time exercise form analysis system",
     previewImage: "/assets/placeholder.png",
     sections: {
