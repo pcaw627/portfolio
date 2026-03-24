@@ -5,6 +5,22 @@ export interface ProfessionalDetailText {
 }
 
 export const professionalDetailText: Record<string, ProfessionalDetailText> = {
+  "portfolio-website": {
+    summary:
+      "Designed and built a personal portfolio website in Next.js that unifies professional and personal content, with smooth in-page navigation, project detail pages, and media galleries powered by filename-based conventions.",
+    designDecisions: `I wanted the website to feel simple to navigate while still supporting richer project storytelling. So instead of splitting everything across isolated routes, I moved the core browsing experience onto the home page with anchored sections for Professional and Personal. This made it easier to scan quickly and reduced context switching.
+
+For long-form content, I kept dedicated detail pages and designed them in a blog-style format that emphasizes text first. I then added a conditional media layer that appears only when assets are present, so the content model stays lightweight and easy to maintain.
+
+To keep media management simple, I implemented filename-driven conventions. Images tagged with [title] are automatically used as preview cards, and images tagged with [full] render full-width in galleries. This lets me control presentation directly from file names without touching code every time I add assets.
+
+I also added quality-of-life navigation features: smooth section scrolling, automatic scroll-to-top on detail pages, Esc-to-home behavior, and click-to-enlarge image lightboxes with animated transitions. Together, these small interactions made the site feel much more polished and intentional.`,
+    keyLearnings: `This project reinforced how far clear conventions can go. A few predictable rules around slugs and file tags eliminated repetitive manual wiring and made future updates much faster.
+
+It also highlighted that UX polish is cumulative. None of the interaction changes were huge on their own, but together they noticeably improved the experience.
+
+Most importantly, I learned that treating a portfolio as a product—not just a static page—creates a better reflection of engineering thinking, design tradeoffs, and iteration discipline.`,
+  },
   "translation-transcription-service": {
     summary:
       "A real-time transcription and translation service, tailored towards intermediate language learners consuming foreign media.",

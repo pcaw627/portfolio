@@ -207,4 +207,32 @@ export const professionalEntries: ProfessionalEntry[] = [
       },
     },
   },
+  {
+    slug: "portfolio-website",
+    title: "Portfolio Website",
+    subtitle: "Interactive portfolio with dynamic media galleries",
+    previewImage: "/assets/placeholder.png",
+    sections: {
+      technologies: {
+        heading: "Title",
+        body: "Portfolio Website",
+        media: { type: "image", src: "/assets/placeholder.png", alt: "Portfolio website title" },
+      },
+      goal: {
+        heading: "Summary",
+        body: "Designed and built a personal portfolio website in Next.js that unifies professional and personal content, with smooth in-page navigation, project detail pages, and media galleries powered by filename-based conventions.",
+        media: { type: "image", src: "/assets/placeholder.png", alt: "Portfolio website summary" },
+      },
+      architecture: {
+        heading: "Design Decisions",
+        body: "Moved section navigation to a single home route with anchor scrolling, created dynamic detail routes for projects and personal entries, and implemented reusable media parsing so tags like [full] and [title] control layout and previews without extra configuration.",
+        media: { type: "image", src: "/assets/placeholder.png", alt: "Portfolio website design decisions" },
+      },
+      learnings: {
+        heading: "Key Learnings & Takeaways",
+        body: "Building the site reinforced the value of content-first architecture, reusable UI primitives, and simple conventions that scale. Iterating quickly on UX details (scroll behavior, keyboard shortcuts, lightbox interactions) had an outsized impact on polish.",
+        media: { type: "image", src: "/assets/placeholder.png", alt: "Portfolio website learnings" },
+      },
+    },
+  },
 ];
