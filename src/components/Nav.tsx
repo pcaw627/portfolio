@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import HashScrollLink from "@/components/HashScrollLink";
 
 const links = [
   { href: "/", label: "Home" },
@@ -24,16 +25,29 @@ export default function Nav() {
             const active = href === "/" ? pathname === "/" : pathname === "/";
             return (
               <li key={href}>
-                <Link
-                  href={href}
-                  className={`text-sm transition-colors ${
-                    active
-                      ? "text-white font-medium"
-                      : "text-zinc-400 hover:text-white"
-                  }`}
-                >
-                  {label}
-                </Link>
+                {href.includes("#") ? (
+                  <HashScrollLink
+                    href={href}
+                    className={`text-sm transition-colors ${
+                      active
+                        ? "text-white font-medium"
+                        : "text-zinc-400 hover:text-white"
+                    }`}
+                  >
+                    {label}
+                  </HashScrollLink>
+                ) : (
+                  <Link
+                    href={href}
+                    className={`text-sm transition-colors ${
+                      active
+                        ? "text-white font-medium"
+                        : "text-zinc-400 hover:text-white"
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                )}
               </li>
             );
           })}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { professionalEntries } from "@/data/professional";
 import { personalEntries } from "@/data/personal";
 import { getProjectPreviewImage } from "@/lib/projectMedia";
+import HashScrollLink from "@/components/HashScrollLink";
 
 export default async function Home() {
   const professionalCards = await Promise.all(
@@ -33,10 +34,44 @@ export default async function Home() {
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          <Link
+          <HashScrollLink
             href="#professional"
-            className="group flex flex-col items-center rounded-2xl border border-zinc-800 bg-zinc-900/60 px-10 py-8 transition-all hover:border-zinc-600 hover:bg-zinc-900"
+            className="hero-branch-card hero-branch-card--professional group relative flex flex-col items-center rounded-2xl border border-zinc-800 bg-zinc-900/60 px-10 py-8 transition-all hover:border-zinc-600 hover:bg-zinc-900"
           >
+            <span className="branch-overlay" aria-hidden="true">
+              <svg
+                className="branch-svg"
+                viewBox="0 0 100 190"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <defs>
+                  <linearGradient id="professional-wisp-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#93c5fd" />
+                    <stop offset="70%" stopColor="#3b82f6" />
+                    <stop offset="100%" stopColor="#1d4ed8" />
+                  </linearGradient>
+                </defs>
+                <path className="branch-path branch-path--professional-main" d="M50 0 Q50 34 50 150" />
+
+                <path className="branch-path branch-path--professional branch-path-delay-1" d="M50 34 Q42 52 36 92" />
+                <path className="branch-path branch-path--professional branch-path-delay-1" d="M50 34 Q58 52 64 92" />
+
+                <path className="branch-path branch-path--professional branch-path-delay-2" d="M50 66 Q40 94 30 136" />
+                <path className="branch-path branch-path--professional branch-path-delay-2" d="M50 66 Q60 94 70 136" />
+
+                <path className="branch-path branch-path--professional branch-path-delay-3" d="M36 92 Q28 110 22 146" />
+                <path className="branch-path branch-path--professional branch-path-delay-3" d="M64 92 Q72 110 78 146" />
+
+                <path className="branch-path branch-path--professional branch-path-delay-4" d="M50 98 Q38 126 24 174" />
+                <path className="branch-path branch-path--professional branch-path-delay-4" d="M50 98 Q62 126 76 174" />
+
+                <path className="branch-path-wisp branch-path-wisp--professional branch-path-delay-2" d="M30 136 Q27 148 22 160" />
+                <path className="branch-path-wisp branch-path-wisp--professional branch-path-delay-2" d="M70 136 Q73 148 78 160" />
+                <path className="branch-path-wisp branch-path-wisp--professional branch-path-delay-3" d="M24 174 Q22 182 19 188" />
+                <path className="branch-path-wisp branch-path-wisp--professional branch-path-delay-3" d="M76 174 Q78 182 81 188" />
+              </svg>
+            </span>
             <span className="text-3xl">💼</span>
             <span className="mt-3 text-xl font-semibold text-white transition-colors group-hover:text-blue-400">
               Professional
@@ -44,12 +79,46 @@ export default async function Home() {
             <span className="mt-1 text-sm text-zinc-500">
               Projects, roles &amp; technical work
             </span>
-          </Link>
+          </HashScrollLink>
 
-          <Link
+          <HashScrollLink
             href="#personal"
-            className="group flex flex-col items-center rounded-2xl border border-zinc-800 bg-zinc-900/60 px-10 py-8 transition-all hover:border-zinc-600 hover:bg-zinc-900"
+            className="hero-branch-card hero-branch-card--personal group relative flex flex-col items-center rounded-2xl border border-zinc-800 bg-zinc-900/60 px-10 py-8 transition-all hover:border-zinc-600 hover:bg-zinc-900"
           >
+            <span className="branch-overlay" aria-hidden="true">
+              <svg
+                className="branch-svg"
+                viewBox="0 0 100 190"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <defs>
+                  <linearGradient id="personal-wisp-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#86efac" />
+                    <stop offset="70%" stopColor="#22c55e" />
+                    <stop offset="100%" stopColor="#16a34a" />
+                  </linearGradient>
+                </defs>
+                <path className="branch-path branch-path--personal-main" d="M50 0 Q50 34 50 150" />
+
+                <path className="branch-path branch-path--personal branch-path-delay-1" d="M50 34 Q42 52 36 92" />
+                <path className="branch-path branch-path--personal branch-path-delay-1" d="M50 34 Q58 52 64 92" />
+
+                <path className="branch-path branch-path--personal branch-path-delay-2" d="M50 66 Q40 94 30 136" />
+                <path className="branch-path branch-path--personal branch-path-delay-2" d="M50 66 Q60 94 70 136" />
+
+                <path className="branch-path branch-path--personal branch-path-delay-3" d="M36 92 Q28 110 22 146" />
+                <path className="branch-path branch-path--personal branch-path-delay-3" d="M64 92 Q72 110 78 146" />
+
+                <path className="branch-path branch-path--personal branch-path-delay-4" d="M50 98 Q38 126 24 174" />
+                <path className="branch-path branch-path--personal branch-path-delay-4" d="M50 98 Q62 126 76 174" />
+
+                <path className="branch-path-wisp branch-path-wisp--personal branch-path-delay-2" d="M30 136 Q27 148 22 160" />
+                <path className="branch-path-wisp branch-path-wisp--personal branch-path-delay-2" d="M70 136 Q73 148 78 160" />
+                <path className="branch-path-wisp branch-path-wisp--personal branch-path-delay-3" d="M24 174 Q22 182 19 188" />
+                <path className="branch-path-wisp branch-path-wisp--personal branch-path-delay-3" d="M76 174 Q78 182 81 188" />
+              </svg>
+            </span>
             <span className="text-3xl">🌿</span>
             <span className="mt-3 text-xl font-semibold text-white transition-colors group-hover:text-emerald-400">
               Personal
@@ -57,7 +126,7 @@ export default async function Home() {
             <span className="mt-1 text-sm text-zinc-500">
               Hobbies, interests &amp; life outside code
             </span>
-          </Link>
+          </HashScrollLink>
         </div>
       </section>
 

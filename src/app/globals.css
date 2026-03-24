@@ -22,3 +22,114 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.hero-branch-card {
+  isolation: isolate;
+  overflow: visible;
+}
+
+.hero-branch-card > *:not(.branch-overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+.branch-overlay {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% - 1px);
+  height: 190px;
+  z-index: 1;
+  overflow: visible;
+}
+
+.branch-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.branch-path {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  opacity: 0;
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  transition:
+    stroke-dashoffset 450ms ease,
+    opacity 220ms ease;
+}
+
+.branch-path-delay-1 {
+  transition-delay: 60ms;
+}
+
+.branch-path-delay-2 {
+  transition-delay: 120ms;
+}
+
+.branch-path-delay-3 {
+  transition-delay: 180ms;
+}
+
+.branch-path-delay-4 {
+  transition-delay: 240ms;
+}
+
+.branch-path-wisp {
+  fill: none;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  opacity: 0;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  transition:
+    stroke-dashoffset 520ms ease,
+    opacity 240ms ease;
+}
+
+.hero-branch-card:hover .branch-path,
+.hero-branch-card:hover .branch-path-wisp {
+  opacity: 0.95;
+  stroke-dashoffset: 0;
+}
+
+.hero-branch-card--professional .branch-path {
+  stroke: url(#professional-wisp-gradient);
+  stroke-width: 2.9;
+  filter: drop-shadow(0 0 5px rgba(42, 132, 255, 0.75));
+}
+
+.hero-branch-card--professional .branch-path--professional-main {
+  stroke-width: 4.2;
+}
+
+.hero-branch-card--professional .branch-path--professional {
+  stroke-width: 3.1;
+}
+
+.hero-branch-card--professional .branch-path-wisp--professional {
+  stroke: url(#professional-wisp-gradient);
+}
+
+.hero-branch-card--personal .branch-path {
+  stroke: url(#personal-wisp-gradient);
+  stroke-width: 2.9;
+  filter: drop-shadow(0 0 5px rgba(34, 197, 94, 0.7));
+}
+
+.hero-branch-card--personal .branch-path--personal-main {
+  stroke-width: 4.2;
+}
+
+.hero-branch-card--personal .branch-path--personal {
+  stroke-width: 3.1;
+  filter: drop-shadow(0 0 5px rgba(34, 197, 94, 0.7));
+}
+
+.hero-branch-card--personal .branch-path-wisp--personal {
+  stroke: url(#personal-wisp-gradient);
+}

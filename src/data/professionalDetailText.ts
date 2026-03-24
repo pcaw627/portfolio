@@ -19,7 +19,7 @@ I also added quality-of-life navigation features: smooth section scrolling, auto
 
 It also highlighted that UX polish is cumulative. None of the interaction changes were huge on their own, but together they noticeably improved the experience.
 
-Most importantly, I learned that treating a portfolio as a product—not just a static page—creates a better reflection of engineering thinking, design tradeoffs, and iteration discipline.`,
+Most importantly, I learned that treating a portfolio as a product- not just a static page- creates a better reflection of engineering thinking, design tradeoffs, and iteration discipline.`,
   },
   "translation-transcription-service": {
     summary:
