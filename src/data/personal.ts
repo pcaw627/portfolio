@@ -10,21 +10,21 @@ import { PersonalEntry } from "./types";
 
 export const personalEntries: PersonalEntry[] = [
   {
-    id: "hiking",
-    title: "Hiking & Nature",
-    body: "I love exploring trails and national parks. There's nothing quite like disconnecting from screens and reconnecting with the natural world. Some of my favourite hikes include trails in the Appalachians and desert canyons of the Southwest.",
-    image: { src: "/assets/pest_detect1.jpg", alt: "Hiking photo" }, // replace with actual image
-  },
-  {
     id: "music",
     title: "Music & Guitar",
     body: "I've been playing guitar for over a decade. From blues to jazz fusion, music is my creative outlet outside of engineering. I also enjoy building and modifying effects pedals.",
     image: { src: "/assets/pest_detect1.jpg", alt: "Guitar photo" }, // replace with actual image
   },
   {
-    id: "reading",
-    title: "Reading",
-    body: "I'm an avid reader — particularly drawn to non-fiction on technology history, systems thinking, and biographies of inventors. A few favourites: The Soul of a New Machine, Thinking in Systems, and Shoe Dog.",
-    image: { src: "/assets/pest_detect1.jpg", alt: "Books photo" }, // replace with actual image
+    id: "travel",
+    title: "Travel",
+    body: "I enjoy traveling and exploring new cities and experiences. Some recent favorites include trips to DC, NYC, and San Diego, where I got to spend time surfing.",
+    image: { src: "/assets/pest_detect1.jpg", alt: "Travel photo" }, // replace with actual image
+  },
+  {
+    id: "nature",
+    title: "Nature",
+    body: "I love exploring trails and national parks. There's nothing quite like disconnecting from screens and reconnecting with the natural world. Time outdoors keeps me grounded and recharged.",
+    image: { src: "/assets/pest_detect1.jpg", alt: "Hiking photo" }, // replace with actual image
   },
 ];

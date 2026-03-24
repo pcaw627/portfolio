@@ -1,9 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 import { personalEntries } from "@/data/personal";
+import { getProjectPreviewImage } from "@/lib/projectMedia";
 
 export const metadata = { title: "Personal — Phillip Williams" };
 
-export default function PersonalPage() {
+export default async function PersonalPage() {
+  const personalCards = await Promise.all(
+    personalEntries.map(async (entry) => ({
+      ...entry,
+      image: {
+        ...entry.image,
+        src: await getProjectPreviewImage(entry.id, entry.image.src),
+      },
+    }))
+  );
+
   return (
     <div className="space-y-20">
       <header>
@@ -15,11 +27,12 @@ export default function PersonalPage() {
         </p>
       </header>
 
-      {personalEntries.map((entry, i) => {
+      {personalCards.map((entry, i) => {
         const reversed = i % 2 !== 0;
         return (
-          <section
+          <Link
             key={entry.id}
+            href={`/personal/${entry.id}`}
             className={`flex flex-col gap-8 md:flex-row md:items-center md:gap-12 ${
               reversed ? "md:flex-row-reverse" : ""
             }`}
@@ -42,7 +55,7 @@ export default function PersonalPage() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-          </section>
+          </Link>
         );
       })}
     </div>
