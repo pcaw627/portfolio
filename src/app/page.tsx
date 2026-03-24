@@ -33,6 +33,34 @@ export default async function Home() {
           and personal interests below.
         </p>
 
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm">
+          <a
+            href="https://drive.google.com/file/d/1yaQoYTe23HszIQNxphM3XeBtfIYTRXsi/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center rounded-full border border-zinc-700 px-4 py-2 text-zinc-200 transition-colors hover:border-zinc-500 hover:text-white"
+          >
+            View CV
+          </a>
+          <a
+            href="https://github.com/pcaw627"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub profile"
+            className="inline-flex items-center rounded-full border border-zinc-700 p-2 text-zinc-200 transition-colors hover:border-zinc-500 hover:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-5 w-5"
+              aria-hidden="true"
+            >
+              <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.72 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.09 0 4.45-2.7 5.42-5.27 5.71.41.36.78 1.08.78 2.18 0 1.58-.01 2.86-.01 3.25 0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+            </svg>
+          </a>
+        </div>
+
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           <HashScrollLink
             href="#professional"

@@ -38,7 +38,7 @@ html {
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(100% - 1px);
+  top: calc(100% - 20px);
   height: 190px;
   z-index: 1;
   overflow: visible;
